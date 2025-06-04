@@ -38,7 +38,7 @@ def correction_star_second():
 def correction_square_kind_1_first():
     alice.penup()
     alice.left(135)
-    alice.forward(math.radians(45)*length)
+    alice.forward(math.sin(math.radians(45))*length)
     alice.right(135)
     
 def correction_square_kind_1_second():
