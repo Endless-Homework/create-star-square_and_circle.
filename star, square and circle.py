@@ -35,13 +35,13 @@ def correction_star_second():
     alice.forward(length/math.cos(angstar))
     alice.left(180)
    
-def correction_square_kind_1_first():
+def correction_square_first():
     alice.penup()
     alice.left(135)
     alice.forward(math.sin(math.radians(45))*length)
     alice.right(135)
     
-def correction_square_kind_1_second():
+def correction_square_second():
     global length
     length = length + 2
     alice.penup()
@@ -50,12 +50,12 @@ def correction_square_kind_1_second():
         
 def square():
     global length
-    correction_square_kind_1_first()
+    correction_square_first()
     for i in range(t):
         for p in range(4):
             alice.forward(length)
             alice.right(90)
-        correction_square_kind_1_second()
+        correction_square_second()
         length = length + 2
         
 def circle():
