@@ -7,6 +7,7 @@ space = Screen()            # create a turtle space
 k = tk.simpledialog.askstring("Input", "What do you want? Star, square or circle?") #k = kind 种类
 t = tk.simpledialog.askinteger("Input", f"How many {k} do you want?") #t = time 次数
 length = tk.simpledialog.askinteger("Input", "Side length?")
+color =  tk.simpledialog.askinteger("Input", "Which colour do you want?")
 
 while True:
     if length < 0:
@@ -19,6 +20,8 @@ angstar = math.radians(18) # angstar means angle of star
 """ angstar means angle of star """
 alice = Turtle() # give the turtle name
 alice.speed(0)
+alice.color(color)
+
 def correction_star_first():
         alice.penup()
         starup = math.tan(angstar)*length/2
@@ -87,3 +90,4 @@ else:
     
 input("Press Enter to exit.")
 exit()
+
